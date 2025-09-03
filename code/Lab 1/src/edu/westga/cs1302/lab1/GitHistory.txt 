@@ -1,0 +1,21 @@
+commit 221cb94f523cf63c71aeaa416aa689782bc46ee5 (HEAD -> main, origin/main) <- ##changed main to dev after remebering.
+Author: Xwrey <89279804+Xwrey@users.noreply.github.com>
+Date:   Wed Aug 27 19:53:30 2025 -0400
+
+    Added statics to bill class
+    
+    TAX_RATE and TIP_RATE are now static final variables to improve readability and avoid magic numbers.
+
+commit 62b14f34a4c29cc4d60f33549f3546bf10d2cb21
+Author: Xwrey <89279804+Xwrey@users.noreply.github.com>
+Date:   Wed Aug 27 19:46:27 2025 -0400
+
+    Separate bill formatting from model
+    
+    Moved text generation logic from the Bill class to a new BillFormatter
+    class to improve separation of concerns. The model should not be
+    responsible for view-related formatting.
+    
+    - Removed getText() from Bill.java and added getItems().
+    - Created new BillTextGen class in the view package.
+    - Placed original text generation logic in BillFormatter.getText().
