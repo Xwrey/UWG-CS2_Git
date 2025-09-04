@@ -1,4 +1,4 @@
-package tests;
+package testModel;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -27,9 +27,14 @@ class TestBillItem {
 	}
 
 	@Test
-	void testValidItemSetsFields() {
+	void testValidItemName() {
 		BillItem item = new BillItem("Burger", 9.99);
-		assertEquals("Burger", item.getName(), "name should equal constructor arg");
+		assertEquals("Burger", item.getName(), "name should equal argument");
+	}
+	
+	@Test
+	void testValidItemAmount() {
+		BillItem item = new BillItem("Burger", 9.99);
 		assertEquals(9.99, item.getAmount(), 0.0001, "amount should equal argument");
 	}
 
