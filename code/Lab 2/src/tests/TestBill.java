@@ -1,6 +1,7 @@
 package tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 import edu.westga.cs1302.lab2.model.Bill;
@@ -38,7 +39,7 @@ class TestBill {
 	}
 	
 	@Test
-	void testAddMultipleItemsPreservesOrder() {
+	void testAddMultipleItems() {
 		Bill bill = new Bill();
 		BillItem burger = new BillItem("Burger", 9.99);
 		BillItem fries = new BillItem("Fries", 3.49);
